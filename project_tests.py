@@ -181,6 +181,9 @@ def test_for_kitti_dataset(data_dir):
     Test whether the KITTI dataset has been downloaded, and whether the full, correct dataset is present.
     :param data_dir: Directory where the KITTI dataset was downloaded into.
     """
+    #print("test_for_kitti_dataset :" + data_dir);
+    #d_data = "./CarND-Semantic-Segmentation/data"
+    
     kitti_dataset_path = os.path.join(data_dir, 'data_road')
     training_labels_count = len(glob(os.path.join(kitti_dataset_path, 'training/gt_image_2/*_road_*.png')))
     training_images_count = len(glob(os.path.join(kitti_dataset_path, 'training/image_2/*.png')))
